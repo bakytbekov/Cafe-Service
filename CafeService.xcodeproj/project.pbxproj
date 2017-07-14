@@ -32,6 +32,16 @@
 		1F9CEF691F18B4B800AE818B /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF681F18B4B800AE818B /* CartManager.swift */; };
 		1F9CEF6C1F18B4C900AE818B /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF6B1F18B4C900AE818B /* Animations.swift */; };
 		1F9CEF6E1F18B54900AE818B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF6D1F18B54900AE818B /* Main.storyboard */; };
+		1F9CEF711F18B6F200AE818B /* KitchenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF701F18B6F200AE818B /* KitchenModel.swift */; };
+		1F9CEF731F18B75400AE818B /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF721F18B75400AE818B /* BarModel.swift */; };
+		1F9CEF751F18B75E00AE818B /* HookahModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF741F18B75E00AE818B /* HookahModel.swift */; };
+		1F9CEF771F18B76C00AE818B /* WaiterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF761F18B76C00AE818B /* WaiterModel.swift */; };
+		1F9CEF791F18B77A00AE818B /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF781F18B77A00AE818B /* OrderModel.swift */; };
+		1F9CEF7B1F18B78400AE818B /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF7A1F18B78400AE818B /* TableModel.swift */; };
+		1F9CEF7F1F18C65E00AE818B /* TablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF7E1F18C65E00AE818B /* TablesVC.swift */; };
+		1F9CEF811F18C99F00AE818B /* TablesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF801F18C99F00AE818B /* TablesCell.swift */; };
+		1F9CEF861F18CFC000AE818B /* FoodProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF841F18CFC000AE818B /* FoodProgressCell.swift */; };
+		1F9CEF871F18CFC000AE818B /* FoodProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF851F18CFC000AE818B /* FoodProgressCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +93,16 @@
 		1F9CEF681F18B4B800AE818B /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		1F9CEF6B1F18B4C900AE818B /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		1F9CEF6D1F18B54900AE818B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1F9CEF701F18B6F200AE818B /* KitchenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitchenModel.swift; sourceTree = "<group>"; };
+		1F9CEF721F18B75400AE818B /* BarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
+		1F9CEF741F18B75E00AE818B /* HookahModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HookahModel.swift; sourceTree = "<group>"; };
+		1F9CEF761F18B76C00AE818B /* WaiterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaiterModel.swift; sourceTree = "<group>"; };
+		1F9CEF781F18B77A00AE818B /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		1F9CEF7A1F18B78400AE818B /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		1F9CEF7E1F18C65E00AE818B /* TablesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablesVC.swift; sourceTree = "<group>"; };
+		1F9CEF801F18C99F00AE818B /* TablesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablesCell.swift; sourceTree = "<group>"; };
+		1F9CEF841F18CFC000AE818B /* FoodProgressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodProgressCell.swift; sourceTree = "<group>"; };
+		1F9CEF851F18CFC000AE818B /* FoodProgressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodProgressCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,18 +153,15 @@
 		1F9CEF131F18B1BA00AE818B /* CafeService */ = {
 			isa = PBXGroup;
 			children = (
-				1F9CEF161F18B1BA00AE818B /* ViewController.swift */,
-				1F9CEF491F18B45800AE818B /* Admin */,
-				1F9CEF521F18B47300AE818B /* Cooker */,
-				1F9CEF551F18B48600AE818B /* Waiter */,
-				1F9CEF6A1F18B4BF00AE818B /* Library */,
-				1F9CEF671F18B4AC00AE818B /* Manager */,
+				1F9CEF7C1F18B79D00AE818B /* VC */,
+				1F9CEF7D1F18B7DD00AE818B /* Helper */,
 				1F9CEF421F18B44400AE818B /* Cells */,
 				1F9CEF141F18B1BA00AE818B /* AppDelegate.swift */,
 				1F9CEF6D1F18B54900AE818B /* Main.storyboard */,
 				1F9CEF1B1F18B1BA00AE818B /* Assets.xcassets */,
 				1F9CEF1D1F18B1BA00AE818B /* LaunchScreen.storyboard */,
 				1F9CEF201F18B1BA00AE818B /* Info.plist */,
+				1F9CEF7E1F18C65E00AE818B /* TablesVC.swift */,
 			);
 			path = CafeService;
 			sourceTree = "<group>";
@@ -173,6 +190,9 @@
 				1F9CEF431F18B45100AE818B /* WaiterCell.swift */,
 				1F9CEF441F18B45100AE818B /* WaiterCell.xib */,
 				1F9CEF451F18B45100AE818B /* CartCell.swift */,
+				1F9CEF801F18C99F00AE818B /* TablesCell.swift */,
+				1F9CEF841F18CFC000AE818B /* FoodProgressCell.swift */,
+				1F9CEF851F18CFC000AE818B /* FoodProgressCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -233,6 +253,40 @@
 				1F9CEF6B1F18B4C900AE818B /* Animations.swift */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		1F9CEF6F1F18B6C100AE818B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF701F18B6F200AE818B /* KitchenModel.swift */,
+				1F9CEF721F18B75400AE818B /* BarModel.swift */,
+				1F9CEF741F18B75E00AE818B /* HookahModel.swift */,
+				1F9CEF761F18B76C00AE818B /* WaiterModel.swift */,
+				1F9CEF781F18B77A00AE818B /* OrderModel.swift */,
+				1F9CEF7A1F18B78400AE818B /* TableModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F9CEF7C1F18B79D00AE818B /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF161F18B1BA00AE818B /* ViewController.swift */,
+				1F9CEF491F18B45800AE818B /* Admin */,
+				1F9CEF521F18B47300AE818B /* Cooker */,
+				1F9CEF551F18B48600AE818B /* Waiter */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		1F9CEF7D1F18B7DD00AE818B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF671F18B4AC00AE818B /* Manager */,
+				1F9CEF6A1F18B4BF00AE818B /* Library */,
+				1F9CEF6F1F18B6C100AE818B /* Model */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +398,7 @@
 			files = (
 				1F9CEF1F1F18B1BA00AE818B /* LaunchScreen.storyboard in Resources */,
 				1F9CEF1C1F18B1BA00AE818B /* Assets.xcassets in Resources */,
+				1F9CEF871F18CFC000AE818B /* FoodProgressCell.xib in Resources */,
 				1F9CEF471F18B45100AE818B /* WaiterCell.xib in Resources */,
 				1F9CEF6E1F18B54900AE818B /* Main.storyboard in Resources */,
 			);
@@ -370,18 +425,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9CEF711F18B6F200AE818B /* KitchenModel.swift in Sources */,
 				1F9CEF4E1F18B46800AE818B /* AdminVC.swift in Sources */,
 				1F9CEF691F18B4B800AE818B /* CartManager.swift in Sources */,
+				1F9CEF751F18B75E00AE818B /* HookahModel.swift in Sources */,
+				1F9CEF731F18B75400AE818B /* BarModel.swift in Sources */,
 				1F9CEF5A1F18B49B00AE818B /* Dish.swift in Sources */,
 				1F9CEF641F18B4A500AE818B /* BarVC.swift in Sources */,
+				1F9CEF811F18C99F00AE818B /* TablesCell.swift in Sources */,
 				1F9CEF661F18B4A500AE818B /* CartVC.swift in Sources */,
 				1F9CEF621F18B4A500AE818B /* WaiterVC.swift in Sources */,
 				1F9CEF5B1F18B49B00AE818B /* Bar.swift in Sources */,
 				1F9CEF461F18B45100AE818B /* WaiterCell.swift in Sources */,
+				1F9CEF771F18B76C00AE818B /* WaiterModel.swift in Sources */,
 				1F9CEF171F18B1BA00AE818B /* ViewController.swift in Sources */,
 				1F9CEF5C1F18B49B00AE818B /* Hookah.swift in Sources */,
+				1F9CEF7B1F18B78400AE818B /* TableModel.swift in Sources */,
 				1F9CEF151F18B1BA00AE818B /* AppDelegate.swift in Sources */,
 				1F9CEF501F18B46800AE818B /* AddFoodVC.swift in Sources */,
+				1F9CEF861F18CFC000AE818B /* FoodProgressCell.swift in Sources */,
+				1F9CEF791F18B77A00AE818B /* OrderModel.swift in Sources */,
 				1F9CEF511F18B46800AE818B /* AddTableVC.swift in Sources */,
 				1F9CEF6C1F18B4C900AE818B /* Animations.swift in Sources */,
 				1F9CEF4F1F18B46800AE818B /* AddWaiterVC.swift in Sources */,
@@ -389,6 +452,7 @@
 				1F9CEF481F18B45100AE818B /* CartCell.swift in Sources */,
 				1F9CEF541F18B47D00AE818B /* CookerVC.swift in Sources */,
 				1F9CEF631F18B4A500AE818B /* KitchenVC.swift in Sources */,
+				1F9CEF7F1F18C65E00AE818B /* TablesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

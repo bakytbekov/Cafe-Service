@@ -42,11 +42,12 @@ enum ROLE {
         case ROLE.waiter.getName():
             self = .waiter
         default:
-            self = .waiter
+            self = .admin
         }
         
     }
 }
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var roleOfWorkersTF: UITextField!
@@ -55,7 +56,6 @@ class ViewController: UIViewController {
     let roleOfWorkers: [ROLE] = [.admin, .cooker, .waiter]
     let pickerView = UIPickerView()
     var role: ROLE?
-    var animation = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,11 +72,11 @@ class ViewController: UIViewController {
             role = ROLE(name: roleOfWorkersTF.text!)
             if role != nil {
                 let vc = sb.instantiateViewController(withIdentifier: role!.getVCId())
-                self.present(vc, animated: false)
+                self.present(vc, animated: true)
             }
         } else {
             incorrectPasswordLbl.isHidden = false
-            animation.incorrectPasswordAnimation(label: incorrectPasswordLbl)
+            Animations.shared.incorrectPasswordAnimation(label: incorrectPasswordLbl)
         }
     }
 }
@@ -97,5 +97,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         roleOfWorkersTF.text = roleOfWorkers[row].getName()
+        self.view.endEditing(false)
     }
 }

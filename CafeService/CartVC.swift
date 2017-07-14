@@ -40,23 +40,10 @@ class CartVC: UIViewController {
     
     @IBAction func showCheckoutView(_ sender: UIButton) {
         self.view.addSubview(cartV)
-        cartV.center = self.view.center
-        cartV.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-        cartV.alpha = 0
-        
-        UIView.animate(withDuration: 0.4) {
-            self.cartV.alpha = 1
-            self.cartV.transform = CGAffineTransform.identity
-        }
+        Animations.shared.showCustomView(view: cartV)
     }
     @IBAction func dismissCheckoutView(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.cartV.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-            self.cartV.alpha = 0
-            
-        }) { (success: Bool) in
-            self.cartV.removeFromSuperview()
-        }
+        Animations.shared.dismissCustomView(view: cartV)
     }
 }
 

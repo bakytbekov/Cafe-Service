@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -31,7 +31,7 @@
                                 <color key="textColor" red="0.17503717539999999" green="0.82843029499999998" blue="0.59035885330000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEE-xg-Iax">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Администратор" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEE-xg-Iax">
                                 <rect key="frame" x="37.5" y="245.5" width="300" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Ltr-AO-qVI"/>
@@ -89,7 +89,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверный пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-27-RrY">
-                                <rect key="frame" x="132" y="357" width="112.5" height="16"/>
+                                <rect key="frame" x="131.5" y="357" width="112.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="860" y="138.98050974512745"/>
         </scene>
-        <!--CookerVC-->
+        <!--Статус-->
         <scene sceneID="cdX-MO-S1z">
             <objects>
-                <viewController storyboardIdentifier="CookerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkA-IV-zTO" customClass="CookerVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CookerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WkA-IV-zTO" customClass="CookerVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xrX-t1-QlB"/>
                         <viewControllerLayoutGuide type="bottom" id="0Cq-PG-JHt"/>
@@ -151,8 +151,18 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pAC-d2-qam">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodProgressCell" id="uCN-c7-dWX" customClass="FoodProgressCell" customModule="CafeService" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uCN-c7-dWX" id="Zfa-cZ-eHj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="WkA-IV-zTO" id="muO-Bw-n0R"/>
                                     <outlet property="delegate" destination="WkA-IV-zTO" id="GWa-ee-lYs"/>
@@ -170,6 +180,7 @@
                             <constraint firstItem="0Cq-PG-JHt" firstAttribute="top" secondItem="pAC-d2-qam" secondAttribute="bottom" id="gLS-b2-TRH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Статус" image="status" id="0kF-r7-q50"/>
                     <connections>
                         <outlet property="foodProgressSC" destination="SlT-5S-nhc" id="tJW-w6-X0f"/>
                         <outlet property="foodProgressTV" destination="pAC-d2-qam" id="lK4-dT-jHq"/>
@@ -179,10 +190,87 @@
             </objects>
             <point key="canvasLocation" x="1745" y="139"/>
         </scene>
+        <!--TablesVC-->
+        <scene sceneID="Rla-oY-yGF">
+            <objects>
+                <viewController storyboardIdentifier="TablesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6XS-ax-NxB" customClass="TablesVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e9Z-oR-a3I"/>
+                        <viewControllerLayoutGuide type="bottom" id="SNX-r5-P5A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5HH-XJ-IHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-Pt-WnO">
+                                <rect key="frame" x="16" y="28" width="343" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LtP-XL-LSG">
+                                    <size key="itemSize" width="80" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TablesCell" id="Q2c-81-mV0" customClass="TablesCell" customModule="CafeService" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YOi-mv-ubc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeX-KC-xoH">
+                                                    <rect key="frame" x="0.0" y="80" width="80" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="hPe-RY-UDj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="YOi-mv-ubc" firstAttribute="leading" secondItem="Q2c-81-mV0" secondAttribute="leading" id="2HI-Fl-1qU"/>
+                                            <constraint firstAttribute="trailing" secondItem="YOi-mv-ubc" secondAttribute="trailing" id="PNA-3L-RL3"/>
+                                            <constraint firstAttribute="bottom" secondItem="XeX-KC-xoH" secondAttribute="bottom" id="RAt-av-xu8"/>
+                                            <constraint firstAttribute="trailing" secondItem="XeX-KC-xoH" secondAttribute="trailing" id="YEU-rV-Dnp"/>
+                                            <constraint firstItem="XeX-KC-xoH" firstAttribute="top" secondItem="YOi-mv-ubc" secondAttribute="bottom" id="wDf-CM-Feg"/>
+                                            <constraint firstItem="XeX-KC-xoH" firstAttribute="leading" secondItem="Q2c-81-mV0" secondAttribute="leading" id="xPC-wW-rRo"/>
+                                            <constraint firstItem="YOi-mv-ubc" firstAttribute="top" secondItem="Q2c-81-mV0" secondAttribute="top" id="yGb-cF-XPJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="tablesImages" destination="YOi-mv-ubc" id="ytV-1y-5kQ"/>
+                                            <outlet property="tablesNames" destination="XeX-KC-xoH" id="Wkm-WM-hsD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6XS-ax-NxB" id="QUM-Cb-Dte"/>
+                                    <outlet property="delegate" destination="6XS-ax-NxB" id="Pd1-Y0-q34"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gmh-Pt-WnO" firstAttribute="top" secondItem="e9Z-oR-a3I" secondAttribute="bottom" constant="8" id="9gh-CI-1sN"/>
+                            <constraint firstItem="Gmh-Pt-WnO" firstAttribute="leading" secondItem="5HH-XJ-IHZ" secondAttribute="leadingMargin" id="EaJ-8i-is0"/>
+                            <constraint firstItem="SNX-r5-P5A" firstAttribute="top" secondItem="Gmh-Pt-WnO" secondAttribute="bottom" id="Sux-De-bXe"/>
+                            <constraint firstItem="Gmh-Pt-WnO" firstAttribute="trailing" secondItem="5HH-XJ-IHZ" secondAttribute="trailingMargin" id="Z53-sn-Nr2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erw-ey-bx3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831" y="139"/>
+        </scene>
         <!--Бар-->
         <scene sceneID="bEf-1K-BAw">
             <objects>
-                <viewController storyboardIdentifier="BarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CiN-Ec-RXf" customClass="BarVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CiN-Ec-RXf" customClass="BarVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8H-dJ-8gv"/>
                         <viewControllerLayoutGuide type="bottom" id="cbM-5R-nSd"/>
@@ -215,12 +303,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elh-9S-1S2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109.5999999999999" y="1538.6806596701651"/>
+            <point key="canvasLocation" x="1430" y="1539"/>
         </scene>
         <!--Кухня-->
         <scene sceneID="uVI-IW-aVg">
             <objects>
-                <viewController storyboardIdentifier="KitchenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6x1-nP-Inj" customClass="KitchenVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KitchenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6x1-nP-Inj" customClass="KitchenVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fdg-fc-cL3"/>
                         <viewControllerLayoutGuide type="bottom" id="M0X-KA-T2h"/>
@@ -253,12 +341,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4an-Ds-YKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437.60000000000002" y="1538.6806596701651"/>
+            <point key="canvasLocation" x="775" y="1539"/>
         </scene>
         <!--Кальян-->
         <scene sceneID="tip-9s-2Ly">
             <objects>
-                <viewController storyboardIdentifier="HookahVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zai-tc-jnV" customClass="HookahVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HookahVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zai-tc-jnV" customClass="HookahVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gzJ-3l-GUK"/>
                         <viewControllerLayoutGuide type="bottom" id="O2s-vg-ea9"/>
@@ -291,31 +379,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKt-wA-GVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744.8" y="1538.6806596701651"/>
-        </scene>
-        <!--Статус-->
-        <scene sceneID="BKF-yg-lKn">
-            <objects>
-                <viewController id="OZp-mX-wPP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Mbu-3D-PXb"/>
-                        <viewControllerLayoutGuide type="bottom" id="LU9-y9-Zcx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dug-5p-nmx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Статус" image="status" id="zMJ-zs-qkM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lGz-6G-JeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2396" y="1539"/>
+            <point key="canvasLocation" x="2074" y="1539"/>
         </scene>
         <!--Корзина-->
         <scene sceneID="tgC-YH-bVP">
             <objects>
-                <viewController storyboardIdentifier="CartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kXB-Rm-vLu" customClass="CartVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kXB-Rm-vLu" customClass="CartVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dB8-Zs-SAY"/>
                         <viewControllerLayoutGuide type="bottom" id="8UO-S7-uDX"/>
@@ -328,7 +397,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="590"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="85" id="Xbr-ue-I5c" customClass="CartCell" customModule="F" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="85" id="Xbr-ue-I5c" customClass="CartCell" customModule="CafeService" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xbr-ue-I5c" id="d8L-WG-Ku9">
@@ -440,7 +509,7 @@
                                 <constraint firstAttribute="height" constant="40" id="6fF-8F-5bD"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5B-hv-qlC">
@@ -451,7 +520,7 @@
                             </connections>
                         </pickerView>
                     </subviews>
-                    <color key="backgroundColor" red="0.17503717539999999" green="0.82843029499999998" blue="0.59035885330000004" alpha="0.55498180650684936" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.17503717541694641" green="0.82843029499053955" blue="0.59035885334014893" alpha="0.66465111301369861" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="r5B-hv-qlC" firstAttribute="leading" secondItem="nLL-tW-Znp" secondAttribute="leading" id="7K5-rJ-rFN"/>
                         <constraint firstAttribute="trailing" secondItem="LeY-un-aSK" secondAttribute="trailing" constant="3" id="CEm-y8-0gD"/>
@@ -467,12 +536,12 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3040.8000000000002" y="1538.6806596701651"/>
+            <point key="canvasLocation" x="2710" y="1539"/>
         </scene>
         <!--WaiterVC-->
         <scene sceneID="k0M-75-o57">
             <objects>
-                <tabBarController storyboardIdentifier="WaiterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qME-38-fZ9" customClass="WaiterVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="WaiterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qME-38-fZ9" customClass="WaiterVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VhQ-1Q-8xL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -482,7 +551,7 @@
                         <segue destination="6x1-nP-Inj" kind="relationship" relationship="viewControllers" id="saC-qS-CRJ"/>
                         <segue destination="CiN-Ec-RXf" kind="relationship" relationship="viewControllers" id="pFo-Xh-UmC"/>
                         <segue destination="Zai-tc-jnV" kind="relationship" relationship="viewControllers" id="qBl-7c-gch"/>
-                        <segue destination="OZp-mX-wPP" kind="relationship" relationship="viewControllers" id="fI1-6O-Wlp"/>
+                        <segue destination="WkA-IV-zTO" kind="relationship" relationship="viewControllers" id="7mO-VX-T2U"/>
                         <segue destination="kXB-Rm-vLu" kind="relationship" relationship="viewControllers" id="FL9-sa-rqA"/>
                     </connections>
                 </tabBarController>
@@ -493,7 +562,7 @@
         <!--+Стол-->
         <scene sceneID="uvo-Qr-tLD">
             <objects>
-                <viewController storyboardIdentifier="AddTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SbA-Dp-Pt5" customClass="AddTableVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SbA-Dp-Pt5" customClass="AddTableVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q8k-aP-jsy"/>
                         <viewControllerLayoutGuide type="bottom" id="Fgb-Xr-28k"/>
@@ -538,7 +607,7 @@
         <!--+Блюдо-->
         <scene sceneID="cV6-JJ-IDy">
             <objects>
-                <viewController storyboardIdentifier="AddFoodVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EYj-mL-Rcs" customClass="AddFoodVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddFoodVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EYj-mL-Rcs" customClass="AddFoodVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xNS-Ll-lEW"/>
                         <viewControllerLayoutGuide type="bottom" id="M8O-So-s7q"/>
@@ -594,6 +663,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="+Блюдо" image="food" id="3Q6-cE-Chp"/>
+                    <connections>
+                        <outlet property="kindOfFoodTF" destination="bfI-5b-Afo" id="yPQ-Qs-QXD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmd-yz-dqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -602,7 +674,7 @@
         <!--+Официант-->
         <scene sceneID="P38-Jn-tg9">
             <objects>
-                <viewController storyboardIdentifier="AddWaiterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fad-GP-7sh" customClass="AddWaiterVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddWaiterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fad-GP-7sh" customClass="AddWaiterVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yrp-vC-hXa"/>
                         <viewControllerLayoutGuide type="bottom" id="HGv-EQ-sfE"/>
@@ -647,7 +719,7 @@
         <!--AdminVC-->
         <scene sceneID="Dy5-AM-9qj">
             <objects>
-                <tabBarController storyboardIdentifier="AdminVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nlo-Ok-WJx" customClass="AdminVC" customModule="F" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AdminVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nlo-Ok-WJx" customClass="AdminVC" customModule="CafeService" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="J3a-Si-23U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

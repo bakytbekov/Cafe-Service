@@ -55,15 +55,19 @@ extension CookerVC: UITableViewDelegate, UITableViewDataSource {
         switch foodProgressSC.selectedSegmentIndex {
         case 0:
             cell.textLabel?.text = toDoList[indexPath.row]
+            //cell.sendToNextBtn.isHidden = false
             break
         case 1:
             cell.textLabel?.text = inProgressList[indexPath.row]
+            //cell.sendToNextBtn.isHidden = false
             break
         case 2:
             cell.textLabel?.text = doneList[indexPath.row]
+            //cell.sendToNextBtn.isHidden = true
             break
         default:
             break
         }
         return cell
-    }}
+    }
+}

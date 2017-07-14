@@ -11,7 +11,7 @@ import UIKit
 class HookahVC: UIViewController {
 
     @IBOutlet weak var hookahTV: UITableView!
-    let items = ["Классический","На молоке","Мята" , "Al Fakher"]
+    let items = ["Классический","На молоке","Мята" , "Al Fakher" , "Maryam"]
     var item = [Hookah]()
     
     override func viewDidLoad() {

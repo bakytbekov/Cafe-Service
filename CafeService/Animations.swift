@@ -9,6 +9,8 @@
 import UIKit
 
 class Animations: UIViewController {
+    
+    static let shared = Animations()
 
     func incorrectPasswordAnimation(label: UILabel) {
         UIView.animate(withDuration: 0.1, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
@@ -22,5 +24,26 @@ class Animations: UIViewController {
         UIView.animate(withDuration: 0.1, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
             label.center.x += 10
         }, completion: nil)
+    }
+    
+    func showCustomView(view: UIView) {
+        view.center = self.view.center
+        view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        view.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            view.alpha = 1
+            view.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func dismissCustomView(view: UIView) {
+        UIView.animate(withDuration: 0.3, animations: {
+            view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            view.alpha = 0
+            
+        }) { (success: Bool) in
+            view.removeFromSuperview()
+        }
     }
 }
