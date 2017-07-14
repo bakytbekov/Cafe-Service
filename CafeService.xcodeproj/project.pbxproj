@@ -9,11 +9,29 @@
 /* Begin PBXBuildFile section */
 		1F9CEF151F18B1BA00AE818B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF141F18B1BA00AE818B /* AppDelegate.swift */; };
 		1F9CEF171F18B1BA00AE818B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF161F18B1BA00AE818B /* ViewController.swift */; };
-		1F9CEF1A1F18B1BA00AE818B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF181F18B1BA00AE818B /* Main.storyboard */; };
 		1F9CEF1C1F18B1BA00AE818B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF1B1F18B1BA00AE818B /* Assets.xcassets */; };
 		1F9CEF1F1F18B1BA00AE818B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF1D1F18B1BA00AE818B /* LaunchScreen.storyboard */; };
 		1F9CEF2A1F18B1BA00AE818B /* CafeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF291F18B1BA00AE818B /* CafeServiceTests.swift */; };
 		1F9CEF351F18B1BA00AE818B /* CafeServiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF341F18B1BA00AE818B /* CafeServiceUITests.swift */; };
+		1F9CEF461F18B45100AE818B /* WaiterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF431F18B45100AE818B /* WaiterCell.swift */; };
+		1F9CEF471F18B45100AE818B /* WaiterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF441F18B45100AE818B /* WaiterCell.xib */; };
+		1F9CEF481F18B45100AE818B /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF451F18B45100AE818B /* CartCell.swift */; };
+		1F9CEF4E1F18B46800AE818B /* AdminVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF4A1F18B46800AE818B /* AdminVC.swift */; };
+		1F9CEF4F1F18B46800AE818B /* AddWaiterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF4B1F18B46800AE818B /* AddWaiterVC.swift */; };
+		1F9CEF501F18B46800AE818B /* AddFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF4C1F18B46800AE818B /* AddFoodVC.swift */; };
+		1F9CEF511F18B46800AE818B /* AddTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF4D1F18B46800AE818B /* AddTableVC.swift */; };
+		1F9CEF541F18B47D00AE818B /* CookerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF531F18B47D00AE818B /* CookerVC.swift */; };
+		1F9CEF5A1F18B49B00AE818B /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF571F18B49B00AE818B /* Dish.swift */; };
+		1F9CEF5B1F18B49B00AE818B /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF581F18B49B00AE818B /* Bar.swift */; };
+		1F9CEF5C1F18B49B00AE818B /* Hookah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF591F18B49B00AE818B /* Hookah.swift */; };
+		1F9CEF621F18B4A500AE818B /* WaiterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF5D1F18B4A500AE818B /* WaiterVC.swift */; };
+		1F9CEF631F18B4A500AE818B /* KitchenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF5E1F18B4A500AE818B /* KitchenVC.swift */; };
+		1F9CEF641F18B4A500AE818B /* BarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF5F1F18B4A500AE818B /* BarVC.swift */; };
+		1F9CEF651F18B4A500AE818B /* HookahVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF601F18B4A500AE818B /* HookahVC.swift */; };
+		1F9CEF661F18B4A500AE818B /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF611F18B4A500AE818B /* CartVC.swift */; };
+		1F9CEF691F18B4B800AE818B /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF681F18B4B800AE818B /* CartManager.swift */; };
+		1F9CEF6C1F18B4C900AE818B /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CEF6B1F18B4C900AE818B /* Animations.swift */; };
+		1F9CEF6E1F18B54900AE818B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CEF6D1F18B54900AE818B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +55,6 @@
 		1F9CEF111F18B1BA00AE818B /* CafeService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9CEF141F18B1BA00AE818B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9CEF161F18B1BA00AE818B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1F9CEF191F18B1BA00AE818B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F9CEF1B1F18B1BA00AE818B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F9CEF1E1F18B1BA00AE818B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F9CEF201F18B1BA00AE818B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +64,25 @@
 		1F9CEF301F18B1BA00AE818B /* CafeServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9CEF341F18B1BA00AE818B /* CafeServiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeServiceUITests.swift; sourceTree = "<group>"; };
 		1F9CEF361F18B1BA00AE818B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9CEF431F18B45100AE818B /* WaiterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaiterCell.swift; sourceTree = "<group>"; };
+		1F9CEF441F18B45100AE818B /* WaiterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaiterCell.xib; sourceTree = "<group>"; };
+		1F9CEF451F18B45100AE818B /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		1F9CEF4A1F18B46800AE818B /* AdminVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminVC.swift; sourceTree = "<group>"; };
+		1F9CEF4B1F18B46800AE818B /* AddWaiterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWaiterVC.swift; sourceTree = "<group>"; };
+		1F9CEF4C1F18B46800AE818B /* AddFoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodVC.swift; sourceTree = "<group>"; };
+		1F9CEF4D1F18B46800AE818B /* AddTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableVC.swift; sourceTree = "<group>"; };
+		1F9CEF531F18B47D00AE818B /* CookerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookerVC.swift; sourceTree = "<group>"; };
+		1F9CEF571F18B49B00AE818B /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		1F9CEF581F18B49B00AE818B /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		1F9CEF591F18B49B00AE818B /* Hookah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hookah.swift; sourceTree = "<group>"; };
+		1F9CEF5D1F18B4A500AE818B /* WaiterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaiterVC.swift; sourceTree = "<group>"; };
+		1F9CEF5E1F18B4A500AE818B /* KitchenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitchenVC.swift; sourceTree = "<group>"; };
+		1F9CEF5F1F18B4A500AE818B /* BarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarVC.swift; sourceTree = "<group>"; };
+		1F9CEF601F18B4A500AE818B /* HookahVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HookahVC.swift; sourceTree = "<group>"; };
+		1F9CEF611F18B4A500AE818B /* CartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		1F9CEF681F18B4B800AE818B /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		1F9CEF6B1F18B4C900AE818B /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		1F9CEF6D1F18B54900AE818B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +133,15 @@
 		1F9CEF131F18B1BA00AE818B /* CafeService */ = {
 			isa = PBXGroup;
 			children = (
-				1F9CEF141F18B1BA00AE818B /* AppDelegate.swift */,
 				1F9CEF161F18B1BA00AE818B /* ViewController.swift */,
-				1F9CEF181F18B1BA00AE818B /* Main.storyboard */,
+				1F9CEF491F18B45800AE818B /* Admin */,
+				1F9CEF521F18B47300AE818B /* Cooker */,
+				1F9CEF551F18B48600AE818B /* Waiter */,
+				1F9CEF6A1F18B4BF00AE818B /* Library */,
+				1F9CEF671F18B4AC00AE818B /* Manager */,
+				1F9CEF421F18B44400AE818B /* Cells */,
+				1F9CEF141F18B1BA00AE818B /* AppDelegate.swift */,
+				1F9CEF6D1F18B54900AE818B /* Main.storyboard */,
 				1F9CEF1B1F18B1BA00AE818B /* Assets.xcassets */,
 				1F9CEF1D1F18B1BA00AE818B /* LaunchScreen.storyboard */,
 				1F9CEF201F18B1BA00AE818B /* Info.plist */,
@@ -123,6 +165,74 @@
 				1F9CEF361F18B1BA00AE818B /* Info.plist */,
 			);
 			path = CafeServiceUITests;
+			sourceTree = "<group>";
+		};
+		1F9CEF421F18B44400AE818B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF431F18B45100AE818B /* WaiterCell.swift */,
+				1F9CEF441F18B45100AE818B /* WaiterCell.xib */,
+				1F9CEF451F18B45100AE818B /* CartCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1F9CEF491F18B45800AE818B /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF4A1F18B46800AE818B /* AdminVC.swift */,
+				1F9CEF4B1F18B46800AE818B /* AddWaiterVC.swift */,
+				1F9CEF4C1F18B46800AE818B /* AddFoodVC.swift */,
+				1F9CEF4D1F18B46800AE818B /* AddTableVC.swift */,
+			);
+			name = Admin;
+			sourceTree = "<group>";
+		};
+		1F9CEF521F18B47300AE818B /* Cooker */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF531F18B47D00AE818B /* CookerVC.swift */,
+			);
+			name = Cooker;
+			sourceTree = "<group>";
+		};
+		1F9CEF551F18B48600AE818B /* Waiter */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF5D1F18B4A500AE818B /* WaiterVC.swift */,
+				1F9CEF5E1F18B4A500AE818B /* KitchenVC.swift */,
+				1F9CEF5F1F18B4A500AE818B /* BarVC.swift */,
+				1F9CEF601F18B4A500AE818B /* HookahVC.swift */,
+				1F9CEF611F18B4A500AE818B /* CartVC.swift */,
+				1F9CEF561F18B48F00AE818B /* Items */,
+			);
+			name = Waiter;
+			sourceTree = "<group>";
+		};
+		1F9CEF561F18B48F00AE818B /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF571F18B49B00AE818B /* Dish.swift */,
+				1F9CEF581F18B49B00AE818B /* Bar.swift */,
+				1F9CEF591F18B49B00AE818B /* Hookah.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		1F9CEF671F18B4AC00AE818B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF681F18B4B800AE818B /* CartManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		1F9CEF6A1F18B4BF00AE818B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CEF6B1F18B4C900AE818B /* Animations.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +344,8 @@
 			files = (
 				1F9CEF1F1F18B1BA00AE818B /* LaunchScreen.storyboard in Resources */,
 				1F9CEF1C1F18B1BA00AE818B /* Assets.xcassets in Resources */,
-				1F9CEF1A1F18B1BA00AE818B /* Main.storyboard in Resources */,
+				1F9CEF471F18B45100AE818B /* WaiterCell.xib in Resources */,
+				1F9CEF6E1F18B54900AE818B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +370,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9CEF4E1F18B46800AE818B /* AdminVC.swift in Sources */,
+				1F9CEF691F18B4B800AE818B /* CartManager.swift in Sources */,
+				1F9CEF5A1F18B49B00AE818B /* Dish.swift in Sources */,
+				1F9CEF641F18B4A500AE818B /* BarVC.swift in Sources */,
+				1F9CEF661F18B4A500AE818B /* CartVC.swift in Sources */,
+				1F9CEF621F18B4A500AE818B /* WaiterVC.swift in Sources */,
+				1F9CEF5B1F18B49B00AE818B /* Bar.swift in Sources */,
+				1F9CEF461F18B45100AE818B /* WaiterCell.swift in Sources */,
 				1F9CEF171F18B1BA00AE818B /* ViewController.swift in Sources */,
+				1F9CEF5C1F18B49B00AE818B /* Hookah.swift in Sources */,
 				1F9CEF151F18B1BA00AE818B /* AppDelegate.swift in Sources */,
+				1F9CEF501F18B46800AE818B /* AddFoodVC.swift in Sources */,
+				1F9CEF511F18B46800AE818B /* AddTableVC.swift in Sources */,
+				1F9CEF6C1F18B4C900AE818B /* Animations.swift in Sources */,
+				1F9CEF4F1F18B46800AE818B /* AddWaiterVC.swift in Sources */,
+				1F9CEF651F18B4A500AE818B /* HookahVC.swift in Sources */,
+				1F9CEF481F18B45100AE818B /* CartCell.swift in Sources */,
+				1F9CEF541F18B47D00AE818B /* CookerVC.swift in Sources */,
+				1F9CEF631F18B4A500AE818B /* KitchenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +424,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1F9CEF181F18B1BA00AE818B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F9CEF191F18B1BA00AE818B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1F9CEF1D1F18B1BA00AE818B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -507,6 +627,7 @@
 				1F9CEF3B1F18B1BA00AE818B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9CEF3C1F18B1BA00AE818B /* Build configuration list for PBXNativeTarget "CafeServiceTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +636,7 @@
 				1F9CEF3E1F18B1BA00AE818B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F9CEF3F1F18B1BA00AE818B /* Build configuration list for PBXNativeTarget "CafeServiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +645,7 @@
 				1F9CEF411F18B1BA00AE818B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

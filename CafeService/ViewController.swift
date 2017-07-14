@@ -8,18 +8,94 @@
 
 import UIKit
 
+enum ROLE {
+    case admin
+    case cooker
+    case waiter
+    
+    func getName() -> String {
+        switch self {
+        case .waiter:
+            return "Официант"
+        case .admin:
+            return "Администратор"
+        case .cooker:
+            return "Повар"
+        }
+    }
+    func getVCId() -> String {
+        switch self {
+        case .waiter:
+            return "WaiterVC"
+        case .admin:
+            return "AdminVC"
+        case .cooker:
+            return "CookerVC"
+        }
+    }
+    init(name: String) {
+        switch name {
+        case ROLE.admin.getName():
+            self = .admin
+        case ROLE.cooker.getName():
+            self = .cooker
+        case ROLE.waiter.getName():
+            self = .waiter
+        default:
+            self = .waiter
+        }
+        
+    }
+}
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var roleOfWorkersTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var incorrectPasswordLbl: UILabel!
+    let roleOfWorkers: [ROLE] = [.admin, .cooker, .waiter]
+    let pickerView = UIPickerView()
+    var role: ROLE?
+    var animation = Animations()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.title = NSLocalizedString("Вход", comment: "Вход")
+        
+        pickerView.delegate = self
+        roleOfWorkersTF.inputView = pickerView
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func showNextVC(_ sender: UIButton) {
+        
+        if passwordTF.text == "1" {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            role = ROLE(name: roleOfWorkersTF.text!)
+            if role != nil {
+                let vc = sb.instantiateViewController(withIdentifier: role!.getVCId())
+                self.present(vc, animated: false)
+            }
+        } else {
+            incorrectPasswordLbl.isHidden = false
+            animation.incorrectPasswordAnimation(label: incorrectPasswordLbl)
+        }
     }
-
-
 }
 
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return roleOfWorkers.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return roleOfWorkers[row].getName()
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        roleOfWorkersTF.text = roleOfWorkers[row].getName()
+    }
+}
